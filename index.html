@@ -8,8 +8,13 @@
       "botName": "Asistente IAsesor",
       "containerWidth": "100%25",
       "layoutWidth": "100%25",
-      "hideWidget": true,
+      "hideWidget": false,
       "disableAnimations": true,
   });
-
+  window.botpressWebChat.onEvent(
+    function () {
+        window.botpressWebChat.sendEvent({ type: "show" });
+    },
+    ["LIFECYCLE.LOADED"]
+    );
 </script>
